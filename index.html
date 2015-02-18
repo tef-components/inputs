@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bower_components/icons/icons.css">
     <link rel="stylesheet" href="bower_components/buttons/css/buttons.min.css">
     <link id="themeFile" rel="stylesheet" href="">
+    <link id="themeButtons" rel="stylesheet" href="">
 
     <style>
       body {
@@ -250,7 +251,9 @@
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
+        var linkButtons = document.getElementById('themeButtons');
         link.href = 'css/inputs.' + theme.value + '.min.css';
+        linkButtons.href = 'bower_components/buttons/css/buttons.' + theme.value + '.min.css';
       });
     </script>
   </body>
