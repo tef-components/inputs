@@ -1,0 +1,29 @@
+.tef-input {
+  font-family: @family;
+
+  input,
+  textarea {
+    font-family: @family;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: @significant;
+    }
+  }
+
+  &.has-succeeded {
+    input { border-color: @positive; }
+    .tef-validation { background-color: @positive; }
+  }
+
+  &.has-warning {
+    input { border-color: @negative; }
+    .tef-validation { background-color: @negative; }
+  }
+
+  &.has-error {
+    input { border-color: @negative; }
+    .tef-validation { background-color: @negative; }
+  }
+}
