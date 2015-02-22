@@ -1,11 +1,11 @@
 {
-  "name": "inputs",
-  "version": "0.1.2",
-  "homepage": "https://github.com/tef-components/inputs",
+  "name": "all",
+  "version": "0.1.1",
+  "homepage": "https://github.com/tef-components/all",
   "authors": [
     "the TEF components team"
   ],
-  "description": "TEF components - inputs",
+  "description": "TEF components - all",
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -18,7 +18,10 @@
     "bower_components"
   ],
   "dependencies": {
+    "button-groups": "tef-components/button-groups",
+    "buttons": "tef-components/buttons",
     "icons": "tef-components/icons",
-    "buttons": "tef-components/buttons"
+    "inputs": "tef-components/inputs",
+    "layout": "tef-components/layout"
   }
 }
