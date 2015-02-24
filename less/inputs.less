@@ -41,9 +41,10 @@
     background: white;
     font-family: @family;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.42857;
     border: 1px solid @grey2;
-    padding: 8px;
+    padding: 5px 9px;
     border-radius: 4px;
     box-sizing: border-box;
     .truncate();
@@ -51,7 +52,6 @@
     //sizes
     &.small {
       font-size: 11px;
-      line-height: 13px;
 
       &.icon {
         padding-right: 35px;
@@ -67,7 +67,6 @@
 
     &.large {
       font-size: 24px;
-      line-height: 26px;
 
       &.icon {
         padding-right: 45px;
@@ -100,7 +99,7 @@
     &:hover,
     &:focus,
     &:active {
-      padding: 7px;
+      padding: 4px 8px;
       border: 2px solid @significant;
       outline: none;
     }

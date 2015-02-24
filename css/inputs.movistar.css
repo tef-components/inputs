@@ -19,9 +19,10 @@
   background: white;
   font-family: "Arial", sans-serif;
   color: black;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.42857;
   border: 1px solid #cfcece;
-  padding: 8px;
+  padding: 5px 9px;
   border-radius: 4px;
   box-sizing: border-box;
   white-space: nowrap;
@@ -31,7 +32,6 @@
 .tef-input input.small,
 .tef-input textarea.small {
   font-size: 11px;
-  line-height: 13px;
 }
 .tef-input input.small.icon,
 .tef-input textarea.small.icon {
@@ -49,7 +49,6 @@
 .tef-input input.large,
 .tef-input textarea.large {
   font-size: 24px;
-  line-height: 26px;
 }
 .tef-input input.large.icon,
 .tef-input textarea.large.icon {
@@ -86,7 +85,7 @@
 .tef-input textarea:focus,
 .tef-input input:active,
 .tef-input textarea:active {
-  padding: 7px;
+  padding: 4px 8px;
   border: 2px solid #00c6d6;
   outline: none;
 }
