@@ -155,3 +155,8 @@ label {
 .tef-form-group .tef-button + .tef-button {
   margin: 0 0 0 -3px !important;
 }
+[disabled],
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
