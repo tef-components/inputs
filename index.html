@@ -47,198 +47,239 @@
     </header>
 
     <h2>Input type text</h2>
-    <div class="tef-input">
-      <input type="text" placeholder="input">
-    </div>
+    <input type="text" class="tef-input" placeholder="input">
     <code>
       <style>
-        <div class="tef-input">
-          <input type="text" placeholder="input">
-        </div>
+        <input type="text" class="tef-input" placeholder="input">
       </style>
     </code>
 
-    <div class="tef-input">
+    <h2>Label + input</h2>
+    <p>Default behaviour is inline.</p>
+    <label>Label</label>
+    <input type="text" class="tef-input" value="input">
+    <code>
+      <style>
+        <label>Label</label>
+        <input type="text" class="tef-input" value="input">
+      </style>
+    </code>
+
+    <h2>Form container</h2>
+    <p>Use class="tef-form-row" to diplay separate blocks of information.</p>
+    <div class="tef-form-row">
       <label>Label</label>
-      <input type="text" value="input">
+      <input type="text" class="tef-input" value="input">
+    </div>
+    <div class="tef-form-row">
+      <label>Label</label>
+      <textarea type="text" class="tef-input">Textarea</textarea>
     </div>
     <code>
       <style>
-        <div class="tef-input">
+        <div class="tef-form-row">
           <label>Label</label>
-          <input type="text" value="input">
+          <input type="text" class="tef-input" value="input">
+        </div>
+        <div class="tef-form-row">
+          <label>Label</label>
+          <textarea type="text" class="tef-input">Textarea</textarea>
         </div>
       </style>
     </code>
 
     <h2>Sizes</h2>
-    <div class="tef-input">
-      <input class="small" type="text" value="Small input">
+    <div class="tef-form-row">
+      <input class="tef-input small" type="text" value="Small input">
+    </div>
+    <div class="tef-form-row">
+      <input class="tef-input large" type="text" value="Small input">
     </div>
     <code>
       <style>
-        <div class="tef-input">
-          <input class="small" type="text" value="Small input">
-        </div>
-      </style>
-    </code>
-    <div class="tef-input">
-      <input class="large" type="text" value="Large input">
-    </div>
-    <code>
-      <style>
-        <div class="tef-input">
-          <input class="large" type="text" value="Large input">
-        </div>
+        <input class="tef-input small" type="text" value="Small input">
+        <input class="tef-input large" type="text" value="Large input">
       </style>
     </code>
 
     <h2>Icons</h2>
-    <div class="tef-input">
-      <input class="small icon" type="text" value="Search">
-      <i data-icon="search"></i>
+    <p>We need an extra container (tef-input-icon) as inputs do not support pseudo elements for icons.</p>
+    <div class="tef-form-row">
+      <div class="tef-input-icon">
+        <input class="tef-input small" type="text" value="Search">
+        <i data-icon="search"></i>
+      </div>
     </div>
-    <div class="tef-input">
-      <input class="icon" type="text" value="Small search">
-      <i data-icon="search"></i>
+    <div class="tef-form-row">
+      <div class="tef-input-icon">
+        <input class="tef-input" type="text" value="Small search">
+        <i data-icon="search"></i>
+      </div>
     </div>
-    <div class="tef-input">
-      <input class="large icon" type="text" value="Large search">
-      <i data-icon="search"></i>
+    <div class="tef-form-row">
+      <div class="tef-input-icon">
+        <input class="tef-input large" type="text" value="Large search">
+        <i data-icon="search"></i>
+      </div>
     </div>
     <code>
       <style>
-        <div class="tef-input">
-          <input class="small icon" type="text" value="Search">
+        <div class="tef-input-icon">
+          <input class="tef-input small" type="text" value="Search">
           <i data-icon="search"></i>
         </div>
       </style>
     </code>
 
     <h2>Validations</h2>
-    <div class="tef-input has-succeeded">
+    <div class="tef-form-row tef-positive">
       <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
+      <input class="tef-input" type="text" value="text">
+      <div class="tef-message">
         This field is valid
       </div>
     </div>
     <code>
       <style>
-        <div class="tef-input has-succeeded">
+        <div class="tef-form-row tef-positive">
           <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
+          <input class="tef-input" type="text" value="text">
+          <div class="tef-message">
             This field is valid
           </div>
         </div>
       </style>
     </code>
 
-    <div class="tef-input has-warning">
+    <div class="tef-form-row tef-warning">
       <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
+      <input class="tef-input" type="text" value="text">
+      <div class="tef-message">
         This field has a warning
       </div>
     </div>
     <code>
       <style>
-        <div class="tef-input has-warning">
+        <div class="tef-form-row tef-warning">
           <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
+          <input class="tef-input" type="text" value="text">
+          <div class="tef-message">
             This field has a warning
           </div>
         </div>
       </style>
     </code>
 
-    <div class="tef-input has-error">
+    <div class="tef-form-row tef-negative">
       <label>Label</label>
-      <input type="text" value="text">
-      <div class="tef-validation">
+      <input class="tef-input" type="text" value="text">
+      <div class="tef-message">
         This field is invalid
       </div>
     </div>
     <code>
       <style>
-        <div class="tef-input has-error">
+        <div class="tef-form-row tef-negative">
           <label>Label</label>
-          <input type="text" value="text">
-          <div class="tef-validation">
+          <input class="tef-input" type="text" value="text">
+          <div class="tef-message">
             This field is invalid
           </div>
         </div>
       </style>
     </code>
 
-    <h2>Grouped inputs</h2>
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <input type="text" placeholder="Enter user name">
-        <a href="" class="tef-button">anchor</a>
-      </div>
+    <h2>Inline Inputs & buttons</h2>
+    <div class="tef-form-row">
+      <a href="" class="tef-button small">Anchor</a>
+      <input type="text" class="tef-input small" placeholder="Enter user name">
+      <button class="tef-button small positive">Button</button>
+    </div>
+    <div class="tef-form-row">
+      <a href="" class="tef-button">Anchor</a>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+      <button class="tef-button positive">Button</button>
+    </div>
+    <div class="tef-form-row">
+      <a href="" class="tef-button large">Anchor</a>
+      <input type="text" class="tef-input large" placeholder="Enter user name">
+      <button class="tef-button large positive">Button</button>
     </div>
     <code>
       <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <input type="text" placeholder="Enter user name">
-            <a href="" class="tef-button">anchor</a>
-          </div>
+        <div class="tef-form-row">
+          <a href="" class="tef-button small">Anchor</a>
+          <input type="text" class="tef-input small" placeholder="Enter user name">
+          <button class="tef-button small positive">Button</button>
         </div>
       </style>
     </code>
 
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <!-- we need a wrapper for the button, as buttons
-             do not support table-cell property -->
-        <div>
-          <button class="tef-button">button</button>
-        </div>
-        <input type="text" placeholder="Enter user name">
-      </div>
+    <h2>Grouped Inputs & buttons</h2>
+
+    <div class="tef-form-group">
+      <a href="" class="tef-button small">Anchor</a>
+      <input type="text" class="tef-input small" placeholder="Enter user name">
+      <button class="tef-button small positive">Button</button>
+    </div>
+    <div class="tef-form-group">
+      <a href="" class="tef-button">Anchor</a>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+      <button class="tef-button positive">Button</button>
+    </div>
+    <div class="tef-form-group">
+      <a href="" class="tef-button large">Anchor</a>
+      <input type="text" class="tef-input large" placeholder="Enter user name">
+      <button class="tef-button large positive">Button</button>
     </div>
     <code>
       <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <!-- we need a wrapper for the button, as buttons
-                 do not support table-cell property -->
-            <div>
-              <button class="tef-button">button</button>
-            </div>
-            <input type="text" placeholder="Enter user name">
-          </div>
+        <div class="tef-form-group">
+          <a href="" class="tef-button small">Anchor</a>
+          <input type="text" class="tef-input small" placeholder="Enter user name">
+          <button class="tef-button small positive">Button</button>
         </div>
       </style>
     </code>
 
-    <div class="tef-input">
-      <label>User name</label>
-      <div class="tef-group">
-        <input type="text" placeholder="Enter user name">
-        <span class="tef-button">
-          <i data-icon="plus"></i>
-        </span>
-      </div>
+    <div class="tef-form-group">
+      <button class="tef-button">
+        <i data-icon="minus"></i>
+      </button>
+      <button class="tef-button">
+        <i data-icon="plus"></i>
+      </button>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+    </div>
+
+    <div class="tef-form-group">
+      <button class="tef-button">
+        <i data-icon="minus"></i>
+      </button>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+      <button class="tef-button">
+        <i data-icon="plus"></i>
+      </button>
+    </div>
+    <div class="tef-form-group">
+      <input type="text" class="tef-input" placeholder="Enter user name">
+      <button class="tef-button">
+        <i data-icon="minus"></i>
+      </button>
+      <button class="tef-button">
+        <i data-icon="plus"></i>
+      </button>
     </div>
     <code>
       <style>
-        <div class="tef-input">
-          <label>User name</label>
-          <div class="tef-group">
-            <input type="text" placeholder="Enter user name">
-            <span class="tef-button">
-              <i data-icon="plus"></i>
-            </span>
-          </div>
+        <div class="tef-form-group">
+          <button class="tef-button">
+            <i data-icon="minus"></i>
+          </button>
+          <input type="text" class="tef-input" placeholder="Enter user name">
+          <button class="tef-button">
+            <i data-icon="plus"></i>
+          </button>
         </div>
       </style>
     </code>
