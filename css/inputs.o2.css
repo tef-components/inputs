@@ -17,11 +17,12 @@ label {
   font-family: "Arial", sans-serif;
   color: black;
   font-size: 15px;
-  line-height: 1.42857;
+  line-height: auto;
   border: 1px solid #cfcece;
-  padding: 5px 9px;
+  padding: 7px 9px;
   border-radius: 4px;
   box-sizing: border-box;
+  height: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -35,9 +36,12 @@ label {
 .tef-input:hover,
 .tef-input:focus,
 .tef-input:active {
-  padding: 4px 8px;
+  padding: 6px 8px;
   border: 2px solid #686868;
   outline: none;
+}
+textarea.tef-input {
+  height: auto;
 }
 .tef-input-icon {
   display: inline-block;

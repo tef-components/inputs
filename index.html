@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="css/inputs.min.css">
+    <link id="themeFile" rel="stylesheet" href="css/inputs.telefonica.min.css">
     <link rel="stylesheet" href="../icons/icons.css">
-    <link id="themeButtons" rel="stylesheet" href="../buttons/css/buttons.min.css">
+    <link id="themeButtons" rel="stylesheet" href="../buttons/css/buttons.telefonica.min.css">
 
     <style>
       body {
@@ -253,14 +253,15 @@
     </div>
 
     <div class="tef-form-group">
-      <button class="tef-button">
+      <a class="tef-button">
         <i data-icon="minus"></i>
-      </button>
+      </a>
       <input type="text" class="tef-input" placeholder="Enter user name">
       <button class="tef-button">
         <i data-icon="plus"></i>
       </button>
     </div>
+
     <div class="tef-form-group">
       <input type="text" class="tef-input" placeholder="Enter user name">
       <button class="tef-button">
@@ -289,9 +290,8 @@
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
         var linkButtons = document.getElementById('themeButtons');
-        var name = (theme.value == 'telefonica'? "" : theme.value + ".");
-        link.href = 'css/inputs.' + name + 'min.css';
-        linkButtons.href = '../buttons/css/buttons.' + name + 'min.css';
+        link.href = 'css/inputs.' + theme.value + '.min.css';
+        linkButtons.href = '../buttons/css/buttons.' + theme.value + '.min.css';
       });
     </script>
   </body>
