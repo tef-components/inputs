@@ -18,11 +18,10 @@ label {
   color: black;
   font-size: 15px;
   line-height: auto;
-  border: 1px solid #cfcece;
   padding: 7px 9px;
+  border: 1px solid #cfcece;
   border-radius: 4px;
   box-sizing: border-box;
-  height: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -39,9 +38,6 @@ label {
   padding: 6px 8px;
   border: 2px solid #686868;
   outline: none;
-}
-textarea.tef-input {
-  height: auto;
 }
 .tef-input-icon {
   display: inline-block;

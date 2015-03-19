@@ -2,23 +2,6 @@
 @import 'mixins.less';
 @import 'variables.less';
 
-// Default variables
-@family: "Arial", sans-serif;
-
-@color: #007486;
-@positive: #00c607;
-@negative: #ca3430;
-@subdued: #84959e;
-@significant: #00c6d7;
-@neutral: #84959e;
-
-@grey1: #f2f2f2;
-@grey2: #cfcece;
-@grey3: #b3b5b7;
-@grey4: #aeadad;
-@grey5: #686868;
-@grey6: #31313d;
-
 label {
   font-family: @family;
   color: @grey5;
@@ -40,11 +23,10 @@ label {
   color: black;
   font-size: 15px;
   line-height: auto;
-  border: 1px solid @grey2;
   padding: 7px 9px;
+  border: 1px solid @grey2;
   border-radius: 4px;
   box-sizing: border-box;
-  height: auto;
   .truncate();
 
   //sizes
@@ -64,10 +46,6 @@ label {
     border: 2px solid @significant;
     outline: none;
   }
-}
-
-textarea.tef-input {
-  height: auto;
 }
 
 // icons
@@ -152,8 +130,8 @@ textarea.tef-input {
 }
 
 // input containers
-.tef-form-row,
-.tef-form-group {
+.tef-row,
+.tef-group {
   display: block;
   position: relative;
   margin-bottom: 10px;
@@ -174,7 +152,7 @@ textarea.tef-input {
   }
 }
 
-.tef-form-group {
+.tef-group {
   & > * {
     border-radius: 0 !important;
     &:first-child,
