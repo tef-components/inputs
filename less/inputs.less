@@ -1,9 +1,10 @@
+//
 // TEF components - inputs
+//
+
 @import 'mixins.less';
-@import 'variables.less';
 
 label {
-  font-family: @family;
   color: @grey5;
   display: inline-block;
   vertical-align: middle;
@@ -19,7 +20,6 @@ label {
   display: inline-block;
   vertical-align: middle;
   background: white;
-  font-family: @family;
   color: black;
   font-size: 15px;
   line-height: auto;
@@ -141,9 +141,9 @@ label {
   }
 
   // separation between items
-  & > * ~ input {
-    margin-left: 6px;
-  }
+//  & > * ~ input {
+//    margin-left: 6px;
+//  }
 
   // items without separation
   & > label + *,
@@ -162,10 +162,10 @@ label {
     &:first-child:last-child { border-radius: 4px !important; }
 
     // remove inline-block space
-    & ~ * { margin: 0 0 0 -4px !important; }
+    & ~ * { margin: 0 0 0 -5px !important; }
   }
 
-  .tef-button + .tef-button { margin: 0 0 0 -3px !important; }
+  .tef-button + .tef-button { border-left-color: white; }
 }
 
 // disabled

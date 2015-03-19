@@ -2,52 +2,36 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
-    less: {
-      development: {
-        options: {
-          optimization: 2
-        },
-        files: {
-          "css/inputs.telefonica.css": "less/inputs.less",
-          "css/inputs.movistar.css": "less/movistar.less",
-          "css/inputs.o2.css": "less/o2.less",
-          "css/inputs.vivo.css": "less/vivo.less"
-        }
-      },
-      production: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          "css/inputs.telefonica.min.css": "less/inputs.less",
-          "css/inputs.movistar.min.css": "less/movistar.less",
-          "css/inputs.o2.min.css": "less/o2.less",
-          "css/inputs.vivo.min.css": "less/vivo.less"
-        }
+    bump: {
+      // upgrade release and push to master
+      options : {
+        files: ['bower.json'],
+        commitFiles: ["-a"],
+        pushTo: 'origin'
       }
     },
 
-    watch: {
-      styles: {
-        files: ['less/**/*.less'],
-        tasks: ['less', 'autoprefixer'],
-        options: {
-          nospawn: true
-        }
-      }
-    },
+    exec: {
+      // add new files before commiting
+      add: {
+        command: 'git add .'
+      },
 
-    autoprefixer: {
-      options: {
-        browsers: ['last 5 versions']
-      },
-      dist: {
-        src: 'css/*.css'
-      },
-    },
+      // push to gh-pages branch
+      pages: {
+        command: [
+          'git checkout gh-pages',
+          'git pull origin master',
+          'git push origin gh-pages',
+          'git checkout master'
+        ].join('&&')
+      }
+    }
   });
 
-  grunt.registerTask('default', ['less','autoprefixer','watch']);
+  grunt.registerTask('release', [
+    'exec:add',
+    'bump',
+    'exec:pages'
+  ]);
 };

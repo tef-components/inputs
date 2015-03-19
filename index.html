@@ -5,293 +5,293 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TEF components demo</title>
     <meta name="viewport" content="width=device-width">
-    <link id="themeFile" rel="stylesheet" href="css/inputs.telefonica.min.css">
-    <link rel="stylesheet" href="../icons/icons.css">
-    <link id="themeButtons" rel="stylesheet" href="../buttons/css/buttons.telefonica.min.css">
+    <link id="themeFile" rel="stylesheet" href="../theme_telefonica/css/components.telefonica.css">
 
     <style>
-      body {
-        font-family: Helvetica, Arial;
-        font-size: 14px;
-      }
-      header {
+      header[data-columns] { padding-top: 30px; }
+      h1 { margin-top: 0; }
+      header > div { padding-top: 2px; }
+      code {
         display: block;
         overflow: hidden;
-      }
-      header * {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      header span {
-        margin-left: 30px;
-        font-size: 12px;
       }
       style {
         display: block;
         white-space: pre;
-        margin-left: -65px;
+        color: #0086B3;
+        border: 1px solid #cfcece;
+        background: #f2f2f2;
+        margin: 20px 0;
         line-height: 25px;
+        overflow-y: auto;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>TEF inputs</h1>
-      <span>Change theme</span>
-      <select id="themeSelector">
-        <option value="telefonica">Telefónica</option>
-        <option value="movistar">Movistar</option>
-        <option value="o2">O2</option>
-        <option value="vivo">Vivo</option>
-      </select>
-    </header>
+    <div class="tef-wrapper">
+      <header data-columns="2" data-columns-xs="1">
+        <h1>Buttons</h1>
+        <div>
+          <label>Change theme</label>
+          <div class="tef-dropdown" data-icon="angle_down">
+            <select id="themeSelector">
+              <option value="telefonica">Telefónica</option>
+              <option value="movistar">Movistar</option>
+              <option value="o2">O2</option>
+              <option value="vivo">Vivo</option>
+            </select>
+          </div>
+        </div>
+      </header>
 
-    <h2>Input type text</h2>
-    <input type="text" class="tef-input" placeholder="input">
-    <code>
-      <style>
-        <input type="text" class="tef-input" placeholder="input">
-      </style>
-    </code>
+      <h2>Input type text</h2>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+      <code>
+        <style>
+      <input type="text" class="tef-input" placeholder="Enter user name">
+        </style>
+      </code>
 
-    <h2>Label + input</h2>
-    <p>Default behaviour is inline.</p>
-    <label>Label</label>
-    <input type="text" class="tef-input" value="input">
-    <code>
-      <style>
-        <label>Label</label>
-        <input type="text" class="tef-input" value="input">
-      </style>
-    </code>
-
-    <h2>Form container</h2>
-    <p>Use class="tef-form-row" to diplay separate blocks of information.</p>
-    <div class="tef-form-row">
+      <h2>Label + input</h2>
+      <p>Default behaviour is inline.</p>
       <label>Label</label>
       <input type="text" class="tef-input" value="input">
-    </div>
-    <div class="tef-form-row">
+      <code>
+        <style>
       <label>Label</label>
-      <textarea type="text" class="tef-input">Textarea</textarea>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-row">
-          <label>Label</label>
-          <input type="text" class="tef-input" value="input">
-        </div>
-        <div class="tef-form-row">
-          <label>Label</label>
-          <textarea type="text" class="tef-input">Textarea</textarea>
-        </div>
-      </style>
-    </code>
+      <input type="text" class="tef-input" value="input">
+        </style>
+      </code>
 
-    <h2>Sizes</h2>
-    <div class="tef-form-row">
-      <input class="tef-input small" type="text" value="Small input">
-    </div>
-    <div class="tef-form-row">
-      <input class="tef-input large" type="text" value="Small input">
-    </div>
-    <code>
-      <style>
+      <h2>Form container</h2>
+      <p>Use class="tef-row" to diplay separate blocks of information.</p>
+      <div class="tef-row">
+        <label>Label</label>
+        <input type="text" class="tef-input" value="input">
+      </div>
+      <div class="tef-row">
+        <label>Label</label>
+        <textarea type="text" class="tef-input">Textarea</textarea>
+      </div>
+      <code>
+        <style>
+      <div class="tef-row">
+        <label>Label</label>
+        <input type="text" class="tef-input" value="input">
+      </div>
+      <div class="tef-row">
+        <label>Label</label>
+        <textarea type="text" class="tef-input">Textarea</textarea>
+      </div>
+        </style>
+      </code>
+
+      <h2>Sizes</h2>
+      <div class="tef-row">
         <input class="tef-input small" type="text" value="Small input">
-        <input class="tef-input large" type="text" value="Large input">
-      </style>
-    </code>
+      </div>
+      <div class="tef-row">
+        <input class="tef-input large" type="text" value="Small input">
+      </div>
+      <code>
+        <style>
+      <input class="tef-input small" type="text" value="Small input">
+      <input class="tef-input large" type="text" value="Large input">
+        </style>
+      </code>
 
-    <h2>Icons</h2>
-    <p>We need an extra container (tef-input-icon) as inputs do not support pseudo elements for icons.</p>
-    <div class="tef-form-row">
-      <div class="tef-input-icon">
-        <input class="tef-input small" type="text" value="Search">
-        <i data-icon="search"></i>
-      </div>
-    </div>
-    <div class="tef-form-row">
-      <div class="tef-input-icon">
-        <input class="tef-input" type="text" value="Small search">
-        <i data-icon="search"></i>
-      </div>
-    </div>
-    <div class="tef-form-row">
-      <div class="tef-input-icon">
-        <input class="tef-input large" type="text" value="Large search">
-        <i data-icon="search"></i>
-      </div>
-    </div>
-    <code>
-      <style>
+      <h2>Icons</h2>
+      <p>We need an extra container (tef-input-icon) as inputs do not support pseudo elements for icons.</p>
+      <div class="tef-row">
         <div class="tef-input-icon">
           <input class="tef-input small" type="text" value="Search">
           <i data-icon="search"></i>
         </div>
-      </style>
-    </code>
-
-    <h2>Validations</h2>
-    <div class="tef-form-row tef-positive">
-      <label>Label</label>
-      <input class="tef-input" type="text" value="text">
-      <div class="tef-message">
-        This field is valid
       </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-row tef-positive">
-          <label>Label</label>
-          <input class="tef-input" type="text" value="text">
-          <div class="tef-message">
-            This field is valid
-          </div>
+      <div class="tef-row">
+        <div class="tef-input-icon">
+          <input class="tef-input" type="text" value="Small search">
+          <i data-icon="search"></i>
         </div>
-      </style>
-    </code>
-
-    <div class="tef-form-row tef-warning">
-      <label>Label</label>
-      <input class="tef-input" type="text" value="text">
-      <div class="tef-message">
-        This field has a warning
       </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-row tef-warning">
-          <label>Label</label>
-          <input class="tef-input" type="text" value="text">
-          <div class="tef-message">
-            This field has a warning
-          </div>
+      <div class="tef-row">
+        <div class="tef-input-icon">
+          <input class="tef-input large" type="text" value="Large search">
+          <i data-icon="search"></i>
         </div>
-      </style>
-    </code>
-
-    <div class="tef-form-row tef-negative">
-      <label>Label</label>
-      <input class="tef-input" type="text" value="text">
-      <div class="tef-message">
-        This field is invalid
       </div>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-row tef-negative">
-          <label>Label</label>
-          <input class="tef-input" type="text" value="text">
-          <div class="tef-message">
-            This field is invalid
-          </div>
+      <code>
+        <style>
+      <div class="tef-input-icon">
+        <input class="tef-input small" type="text" value="Search">
+        <i data-icon="search"></i>
+      </div>
+        </style>
+      </code>
+
+      <h2>Validations</h2>
+      <div class="tef-row tef-positive">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field is valid
         </div>
-      </style>
-    </code>
-
-    <h2>Inline Inputs & buttons</h2>
-    <div class="tef-form-row">
-      <a href="" class="tef-button small">Anchor</a>
-      <input type="text" class="tef-input small" placeholder="Enter user name">
-      <button class="tef-button small positive">Button</button>
-    </div>
-    <div class="tef-form-row">
-      <a href="" class="tef-button">Anchor</a>
-      <input type="text" class="tef-input" placeholder="Enter user name">
-      <button class="tef-button positive">Button</button>
-    </div>
-    <div class="tef-form-row">
-      <a href="" class="tef-button large">Anchor</a>
-      <input type="text" class="tef-input large" placeholder="Enter user name">
-      <button class="tef-button large positive">Button</button>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-row">
-          <a href="" class="tef-button small">Anchor</a>
-          <input type="text" class="tef-input small" placeholder="Enter user name">
-          <button class="tef-button small positive">Button</button>
+      </div>
+      <code>
+        <style>
+      <div class="tef-row tef-positive">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field is valid
         </div>
-      </style>
-    </code>
+      </div>
+        </style>
+      </code>
 
-    <h2>Grouped Inputs & buttons</h2>
-
-    <div class="tef-form-group">
-      <a href="" class="tef-button small">Anchor</a>
-      <input type="text" class="tef-input small" placeholder="Enter user name">
-      <button class="tef-button small positive">Button</button>
-    </div>
-    <div class="tef-form-group">
-      <a href="" class="tef-button">Anchor</a>
-      <input type="text" class="tef-input" placeholder="Enter user name">
-      <button class="tef-button positive">Button</button>
-    </div>
-    <div class="tef-form-group">
-      <a href="" class="tef-button large">Anchor</a>
-      <input type="text" class="tef-input large" placeholder="Enter user name">
-      <button class="tef-button large positive">Button</button>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-group">
-          <a href="" class="tef-button small">Anchor</a>
-          <input type="text" class="tef-input small" placeholder="Enter user name">
-          <button class="tef-button small positive">Button</button>
+      <div class="tef-row tef-warning">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field has a warning
         </div>
-      </style>
-    </code>
-
-    <div class="tef-form-group">
-      <button class="tef-button">
-        <i data-icon="minus"></i>
-      </button>
-      <button class="tef-button">
-        <i data-icon="plus"></i>
-      </button>
-      <input type="text" class="tef-input" placeholder="Enter user name">
-    </div>
-
-    <div class="tef-form-group">
-      <a class="tef-button">
-        <i data-icon="minus"></i>
-      </a>
-      <input type="text" class="tef-input" placeholder="Enter user name">
-      <button class="tef-button">
-        <i data-icon="plus"></i>
-      </button>
-    </div>
-
-    <div class="tef-form-group">
-      <input type="text" class="tef-input" placeholder="Enter user name">
-      <button class="tef-button">
-        <i data-icon="minus"></i>
-      </button>
-      <button class="tef-button">
-        <i data-icon="plus"></i>
-      </button>
-    </div>
-    <code>
-      <style>
-        <div class="tef-form-group">
-          <button class="tef-button">
-            <i data-icon="minus"></i>
-          </button>
-          <input type="text" class="tef-input" placeholder="Enter user name">
-          <button class="tef-button">
-            <i data-icon="plus"></i>
-          </button>
+      </div>
+      <code>
+        <style>
+      <div class="tef-row tef-warning">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field has a warning
         </div>
-      </style>
-    </code>
+      </div>
+        </style>
+      </code>
+
+      <div class="tef-row tef-negative">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field is invalid
+        </div>
+      </div>
+      <code>
+        <style>
+      <div class="tef-row tef-negative">
+        <label>Label</label>
+        <input class="tef-input" type="text" value="text">
+        <div class="tef-message">
+          This field is invalid
+        </div>
+      </div>
+        </style>
+      </code>
+
+      <h2>Inline Inputs & buttons</h2>
+      <div class="tef-row">
+        <a href="" class="tef-button small">Anchor</a>
+        <input type="text" class="tef-input small" placeholder="Enter user name">
+        <button class="tef-button small positive">Button</button>
+      </div>
+      <div class="tef-row">
+        <a href="" class="tef-button">Anchor</a>
+        <input type="text" class="tef-input" placeholder="Enter user name">
+        <button class="tef-button positive">Button</button>
+      </div>
+      <div class="tef-row">
+        <a href="" class="tef-button large">Anchor</a>
+        <input type="text" class="tef-input large" placeholder="Enter user name">
+        <button class="tef-button large positive">Button</button>
+      </div>
+      <code>
+        <style>
+      <div class="tef-row">
+        <a href="" class="tef-button small">Anchor</a>
+        <input type="text" class="tef-input small" placeholder="Enter user name">
+        <button class="tef-button small positive">Button</button>
+      </div>
+        </style>
+      </code>
+
+      <h2>Grouped Inputs & buttons</h2>
+
+      <div class="tef-group">
+        <a href="" class="tef-button small">Anchor</a>
+        <input type="text" class="tef-input small" placeholder="Enter user name">
+        <button class="tef-button small positive">Button</button>
+      </div>
+      <div class="tef-group">
+        <a href="" class="tef-button">Anchor</a>
+        <input type="text" class="tef-input" placeholder="Enter user name">
+        <button class="tef-button positive">Button</button>
+      </div>
+      <div class="tef-group">
+        <a href="" class="tef-button large">Anchor</a>
+        <input type="text" class="tef-input large" placeholder="Enter user name">
+        <button class="tef-button large positive">Button</button>
+      </div>
+      <code>
+        <style>
+      <div class="tef-group">
+        <a href="" class="tef-button small">Anchor</a>
+        <input type="text" class="tef-input small" placeholder="Enter user name">
+        <button class="tef-button small positive">Button</button>
+      </div>
+        </style>
+      </code>
+
+      <div class="tef-group">
+        <button class="tef-button">
+          <i data-icon="minus"></i>
+        </button>
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+        </button>
+        <input type="text" class="tef-input" placeholder="Enter user name">
+      </div>
+
+      <div class="tef-group">
+        <a class="tef-button">
+          <i data-icon="minus"></i>
+        </a>
+        <input type="text" class="tef-input" placeholder="Enter user name">
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+
+      <div class="tef-group">
+        <input type="text" class="tef-input" placeholder="Enter user name">
+        <button class="tef-button">
+          <i data-icon="minus"></i>
+        </button>
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+      <code>
+        <style>
+      <div class="tef-group">
+        <button class="tef-button">
+          <i data-icon="minus"></i>
+        </button>
+        <input type="text" class="tef-input" placeholder="Enter user name">
+        <button class="tef-button">
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+        </style>
+      </code>
+    </div>
 
     <script>
       var theme = document.getElementById('themeSelector');
       theme.addEventListener('change', function() {
         var link = document.getElementById('themeFile');
-        var linkButtons = document.getElementById('themeButtons');
-        link.href = 'css/inputs.' + theme.value + '.min.css';
-        linkButtons.href = '../buttons/css/buttons.' + theme.value + '.min.css';
+        link.href = '../theme_'
+          + theme.value + '/css/components.'
+          + theme.value + '.css';
       });
     </script>
   </body>
