@@ -112,9 +112,9 @@ label {
   box-sizing: border-box;
 }
 
-.tef-positive {
+.tef-ok {
   input {
-    padding: 4px 8px;
+    padding: 6px 8px;
     border: 2px solid @positive;
   }
   .tef-message { background-color: @positive; }
@@ -123,7 +123,7 @@ label {
 .tef-warning,
 .tef-negative {
   input {
-    padding: 4px 8px;
+    padding: 6px 8px;
     border: 2px solid @negative;
   }
   .tef-message { background-color: @negative; }
@@ -139,11 +139,6 @@ label {
   label {
     display: block;
   }
-
-  // separation between items
-//  & > * ~ input {
-//    margin-left: 6px;
-//  }
 
   // items without separation
   & > label + *,
