@@ -57,8 +57,8 @@ module.exports = function(grunt) {
     'exec:pages'
   ]);
 
-  grunt.registerTask('prompt', [
+  grunt.registerTask('question', [
     'prompt',
-    //'exec:message'
+    'exec:message'
   ]);
 };
