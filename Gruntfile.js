@@ -53,12 +53,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('release', [
     'exec:add',
+    'prompt',
+    'exec:message',
     'bump',
     'exec:pages'
-  ]);
-
-  grunt.registerTask('question', [
-    'prompt',
-    'exec:message'
   ]);
 };
