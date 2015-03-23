@@ -72,7 +72,7 @@
       </div>
       <div class="tef-row">
         <label>Label</label>
-        <textarea type="text" class="tef-input">Textarea</textarea>
+        <textarea class="tef-input">Textarea</textarea>
       </div>
       <code>
         <style>
@@ -82,7 +82,7 @@
       </div>
       <div class="tef-row">
         <label>Label</label>
-        <textarea type="text" class="tef-input">Textarea</textarea>
+        <textarea class="tef-input">Textarea</textarea>
       </div>
         </style>
       </code>
@@ -92,62 +92,86 @@
         <input class="tef-input small" type="text" value="Small input">
       </div>
       <div class="tef-row">
-        <input class="tef-input large" type="text" value="Small input">
+        <textarea class="tef-input small">Small Textarea</textarea>
+      </div>
+      <div class="tef-row">
+        <input class="tef-input large" type="text" value="Large input">
+      </div>
+      <div class="tef-row">
+        <textarea class="tef-input large">Large Textarea</textarea>
       </div>
       <code>
         <style>
       <input class="tef-input small" type="text" value="Small input">
+      <textarea class="tef-input small">Small Textarea</textarea>
       <input class="tef-input large" type="text" value="Large input">
+      <textarea class="tef-input large">Large Textarea</textarea>
         </style>
       </code>
 
       <h2>Icons</h2>
-      <p>We need an extra container (tef-input-icon) as inputs do not support pseudo elements for icons.</p>
       <div class="tef-row">
-        <div class="tef-input-icon">
-          <input class="tef-input small" type="text" value="Search">
-          <i data-icon="search"></i>
-        </div>
+        <input class="tef-input icon small" type="text" value="Small search">
+        <i data-icon="search"></i>
       </div>
       <div class="tef-row">
-        <div class="tef-input-icon">
-          <input class="tef-input" type="text" value="Small search">
-          <i data-icon="search"></i>
-        </div>
+        <input class="tef-input icon" type="text" value="Small search">
+        <i data-icon="search"></i>
       </div>
       <div class="tef-row">
-        <div class="tef-input-icon">
-          <input class="tef-input large" type="text" value="Large search">
-          <i data-icon="search"></i>
-        </div>
+        <input class="tef-input icon large" type="text" value="Large search">
+        <i data-icon="search"></i>
       </div>
       <code>
         <style>
-      <div class="tef-input-icon">
-        <input class="tef-input small" type="text" value="Search">
+      <input class="tef-input icon small" type="text" value="Search">
+      <i data-icon="search"></i>
+        </style>
+      </code>
+
+      <h2>Block</h2>
+      <p>Fits the available space.</p>
+      <div class="tef-row">
+        <input class="tef-input block" type="text" value="Text">
+      </div>
+      <div class="tef-row">
+        <input class="tef-input block icon" type="text" value="Search">
         <i data-icon="search"></i>
       </div>
+      <code>
+        <style>
+      <input class="tef-input block" type="text" value="Text">
+
+      <input class="tef-input block icon" type="text" value="Search">
+      <i data-icon="search"></i>
         </style>
       </code>
 
       <h2>Validations</h2>
       <div class="tef-row tef-ok">
-        <label>Label</label>
+        <label>Inline small input</label>
         <input class="tef-input small" type="text" value="text">
         <div class="tef-message">
           This field is valid
         </div>
       </div>
       <div class="tef-row tef-ok">
-        <label>Label</label>
+        <label>Inline input</label>
         <input class="tef-input" type="text" value="text">
         <div class="tef-message">
           This field is valid
         </div>
       </div>
       <div class="tef-row tef-ok">
-        <label>Label</label>
+        <label>Inline large input</label>
         <input class="tef-input large" type="text" value="text">
+        <div class="tef-message">
+          This field is valid
+        </div>
+      </div>
+      <div class="tef-row tef-ok">
+        <label>Block input</label>
+        <input class="tef-input block" type="text" value="text">
         <div class="tef-message">
           This field is valid
         </div>

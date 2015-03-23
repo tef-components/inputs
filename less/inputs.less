@@ -15,14 +15,11 @@ label {
 }
 
 .tef-input {
-  width: 100%;
-  max-width: 330px;
   display: inline-block;
   vertical-align: middle;
   background: white;
   color: black;
   font-size: 15px;
-  line-height: auto;
   padding: 7px 9px;
   border: 1px solid @grey2;
   border-radius: 4px;
@@ -46,18 +43,9 @@ label {
     border: 2px solid @significant;
     outline: none;
   }
-}
 
-// icons
-// inputs do not support pseudo classes, so we need an extra container
-.tef-input-icon {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  width: 100%;
-  max-width: 330px;
-
-  .tef-input {
+  // icons
+  &.icon {
     padding-right: 40px;
 
     &:hover,
@@ -67,47 +55,49 @@ label {
     }
 
     & + [data-icon] {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      height: 24px;
-      margin-top: -12px;
+      position: relative;
+      top: 3px;
+      left: -37px;
+      width: 40px;
 
       &:before { font-size: 24px; }
     }
 
-    &.small {
-      padding-right: 35px;
+    &.small + [data-icon] {
+      top: 2px;
+      left: -32px;
 
-      & + [data-icon] {
-        height: 18px;
-        margin-top: -9px;
-
-        &:before { font-size: 18px; }
-      }
+      &:before { font-size: 18px; }
     }
 
-    &.large {
-      padding-right: 45px;
+    &.large + [data-icon] {
+      top: 6px;
+      left: -40px;
 
-      & + [data-icon] {
-        height: 30px;
-        margin-top: -15px;
+      &:before { font-size: 30px; }
+    }
+  }
 
-        &:before { font-size: 30px; }
-      }
+  //options
+  &.block {
+    width: 100%;
+
+    & + [data-icon],
+    &.small + [data-icon],
+    &.large + [data-icon] {
+      position: absolute;
+      right: 0;
+      left: auto;
     }
   }
 }
 
-
 // validation
 .tef-message {
-  display: block;
-  max-width: 330px;
+  display: inline-block;
+  vertical-align: middle;
   color: white;
-  padding: 10px;
-  margin-top: 5px;
+  padding: 8px 10px;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -127,6 +117,16 @@ label {
     border: 2px solid @negative;
   }
   .tef-message { background-color: @negative; }
+}
+
+.tef-input {
+  &.small + .tef-message { font-size: 11px; }
+  &.large + .tef-message { font-size: 24px; }
+
+  &.block + .tef-message {
+    margin-top: 5px;
+    display: block;
+  }
 }
 
 // input containers
