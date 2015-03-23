@@ -148,19 +148,23 @@ label {
 }
 
 .tef-group {
-  & > * {
+  & > * ,
+  & ::content > *{
     border-radius: 0 !important;
     &:first-child,
-    &:first-child > button { border-radius: 4px 0 0 4px !important; }
+    &:first-child > button,
+    &:first-child::shadow .tef-button { border-radius: 4px 0 0 4px !important; }
     &:last-child,
-    &:last-child > button  { border-radius: 0 4px 4px 0 !important; }
+    &:last-child > button,
+    &:last-child::shadow .tef-button { border-radius: 0 4px 4px 0 !important; }
     &:first-child:last-child { border-radius: 4px !important; }
 
     // remove inline-block space
     & ~ * { margin: 0 0 0 -5px !important; }
   }
 
-  .tef-button + .tef-button { border-left-color: white; }
+  .tef-button + .tef-button,
+  ::content tef-button + tef-button::shadow .tef-button{ border-left-color: white; }
 }
 
 // disabled
