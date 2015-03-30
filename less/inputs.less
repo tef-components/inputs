@@ -101,9 +101,9 @@ label {
 .tef-message {
   display: inline-block;
   vertical-align: middle;
-  font-size: 15px;
   color: white;
-  padding: 9px 10px;
+  font-size: 12px;
+  padding: 6px 10px;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -129,21 +129,9 @@ label {
   .tef-message { background-color: @negative; }
 }
 
-.tef-input {
-  &.small + .tef-message {
-    font-size: 11px;
-    padding: 7px 10px;
-  }
-
-  &.large + .tef-message {
-    font-size: 24px;
-    padding: 8px 15px;
-  }
-
-  &.block + .tef-message {
-    margin-top: 5px;
-    display: block;
-  }
+.tef-input.block + .tef-message {
+  margin-top: 5px;
+  display: block;
 }
 
 // input containers
