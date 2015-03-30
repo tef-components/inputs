@@ -20,7 +20,7 @@ label {
   background: white;
   color: black;
   font-size: 15px;
-  padding: 7px 9px;
+  padding: 9px;
   border: 1px solid @grey2;
   border-radius: 4px;
   box-sizing: border-box;
@@ -29,19 +29,24 @@ label {
   //sizes
   &.small {
     font-size: 11px;
+    padding: 6px 9px;
   }
 
   &.large {
     font-size: 24px;
+    padding: 8px 14px;
   }
 
   // states
   &:hover,
   &:focus,
   &:active {
-    padding: 6px 8px;
+    padding: 8px;
     border: 2px solid @significant;
     outline: none;
+
+    &.small { padding: 5px 8px; }
+    &.large { padding: 7px 13px; }
   }
 
   // icons
@@ -96,16 +101,19 @@ label {
 .tef-message {
   display: inline-block;
   vertical-align: middle;
+  font-size: 15px;
   color: white;
-  padding: 8px 10px;
+  padding: 10px;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .tef-ok {
   input {
-    padding: 6px 8px;
+    padding: 8px;
     border: 2px solid @positive;
+    &.small { padding: 5px 8px; }
+    &.large { padding: 7px 13px; }
   }
   .tef-message { background-color: @positive; }
 }
@@ -113,15 +121,24 @@ label {
 .tef-warning,
 .tef-negative {
   input {
-    padding: 6px 8px;
+    padding: 8px;
     border: 2px solid @negative;
+    &.small { padding: 5px 8px; }
+    &.large { padding: 7px 13px; }
   }
   .tef-message { background-color: @negative; }
 }
 
 .tef-input {
-  &.small + .tef-message { font-size: 11px; }
-  &.large + .tef-message { font-size: 24px; }
+  &.small + .tef-message {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  &.large + .tef-message {
+    font-size: 24px;
+    padding: 9px 15px;
+  }
 
   &.block + .tef-message {
     margin-top: 5px;
