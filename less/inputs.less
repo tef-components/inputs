@@ -115,24 +115,30 @@ label {
   box-sizing: border-box;
 }
 
-.tef-ok {
-  input {
-    padding: 7px 8px;
-    border: 2px solid @positive;
-    &.small { padding: 5px 8px; }
-    &.large { padding: 6px 13px; }
-  }
-  .tef-message { background-color: @positive; }
-}
-
+.tef-ok,
 .tef-warning,
 .tef-error {
   input {
     padding: 7px 8px;
-    border: 2px solid @negative;
+    border-width: 2px;
+    border-style: solid;
     &.small { padding: 5px 8px; }
     &.large { padding: 6px 13px; }
   }
+}
+
+.tef-ok {
+  input { border-color: @positive; }
+  .tef-message { background-color: @positive; }
+}
+
+.tef-warning {
+  input { border-color: @warning; }
+  .tef-message { background-color: @warning; }
+}
+
+.tef-error {
+  input { border-color: @negative; }
   .tef-message { background-color: @negative; }
 }
 
