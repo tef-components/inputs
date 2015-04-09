@@ -118,27 +118,30 @@ label {
 .tef-ok,
 .tef-warning,
 .tef-error {
-  input {
+  .tef-input {
     padding: 7px 8px;
     border-width: 2px;
     border-style: solid;
     &.small { padding: 5px 8px; }
     &.large { padding: 6px 13px; }
+    &:hover,
+    &:focus,
+    &:active { border-color: @significant; }
   }
 }
 
 .tef-ok {
-  input { border-color: @positive; }
+  .tef-input { border-color: @positive; }
   .tef-message { background-color: @positive; }
 }
 
 .tef-warning {
-  input { border-color: @warning; }
+  .tef-input { border-color: @warning; }
   .tef-message { background-color: @warning; }
 }
 
 .tef-error {
-  input { border-color: @negative; }
+  .tef-input { border-color: @negative; }
   .tef-message { background-color: @negative; }
 }
 
