@@ -172,6 +172,7 @@ label {
 .tef-group {
   & > * {
     border-radius: 0 !important;
+
     &:first-child,
     &:first-child > button { border-radius: @radius 0 0 @radius !important; }
     &:last-child,
@@ -184,12 +185,16 @@ label {
 
   ::content > * {
     border-radius: 0 !important;
+    &::shadow .tef-button,
+    &::shadow .tef-input {border-radius: 0 !important;}
     &:first-child,
     &:first-child > button,
-    &:first-child::shadow .tef-button { border-radius: @radius 0 0 @radius !important; }
+    &:first-child::shadow .tef-button,
+    &:first-child::shadow .tef-input { border-radius: @radius 0 0 @radius !important; }
     &:last-child,
     &:last-child > button,
-    &:last-child::shadow .tef-button { border-radius: 0 @radius @radius 0 !important; }
+    &:last-child::shadow .tef-button,
+    &:last-child::shadow .tef-input { border-radius: 0 @radius @radius 0 !important; }
     &:first-child:last-child { border-radius: @radius !important; }
 
     // remove inline-block space
