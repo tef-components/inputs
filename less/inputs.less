@@ -14,7 +14,7 @@ label {
   padding-right: 7px;
 }
 
-.tef-input {
+.tc-input {
   display: inline-block;
   vertical-align: middle;
   background: white;
@@ -105,7 +105,7 @@ label {
 }
 
 // validation
-.tef-message {
+.tc-message {
   display: inline-block;
   vertical-align: middle;
   color: white;
@@ -115,10 +115,10 @@ label {
   box-sizing: border-box;
 }
 
-.tef-ok,
-.tef-warning,
-.tef-error {
-  .tef-input {
+.tc-ok,
+.tc-warning,
+.tc-error {
+  .tc-input {
     padding: 7px 8px;
     border-width: 2px;
     border-style: solid;
@@ -130,46 +130,46 @@ label {
   }
 }
 
-.tef-ok {
-  .tef-input { border-color: @positive; }
-  .tef-message { background-color: @positive; }
+.tc-ok {
+  .tc-input { border-color: @positive; }
+  .tc-message { background-color: @positive; }
 }
 
-.tef-warning {
-  .tef-input { border-color: @warning; }
-  .tef-message { background-color: @warning; }
+.tc-warning {
+  .tc-input { border-color: @warning; }
+  .tc-message { background-color: @warning; }
 }
 
-.tef-error {
-  .tef-input { border-color: @negative; }
-  .tef-message { background-color: @negative; }
+.tc-error {
+  .tc-input { border-color: @negative; }
+  .tc-message { background-color: @negative; }
 }
 
-.tef-input.block + .tef-message {
+.tc-input.block + .tc-message {
   margin-top: 5px;
   display: block;
 }
 
 // input containers
-.tef-row,
-.tef-group {
+.tc-row,
+.tc-group {
   display: block;
   position: relative;
   margin-bottom: 10px;
 
   label {
     display: block;
-    &.tef-inline { display: inline-block; }
+    &.tc-inline { display: inline-block; }
   }
 
   // items without separation
   & > label + *,
-  & > .tef-message {
+  & > .tc-message {
     margin-left: 0;
   }
 }
 
-.tef-group {
+.tc-group {
   & > * {
     border-radius: 0 !important;
 
@@ -185,27 +185,27 @@ label {
 
   ::content > * {
     border-radius: 0 !important;
-    &::shadow .tef-button,
-    &::shadow .tef-input {border-radius: 0 !important;}
+    &::shadow .tc-button,
+    &::shadow .tc-input {border-radius: 0 !important;}
     &:first-child,
     &:first-child > button,
-    &:first-child::shadow .tef-button,
-    &:first-child::shadow .tef-input { border-radius: @radius 0 0 @radius !important; }
+    &:first-child::shadow .tc-button,
+    &:first-child::shadow .tc-input { border-radius: @radius 0 0 @radius !important; }
     &:last-child,
     &:last-child > button,
-    &:last-child::shadow .tef-button,
-    &:last-child::shadow .tef-input { border-radius: 0 @radius @radius 0 !important; }
+    &:last-child::shadow .tc-button,
+    &:last-child::shadow .tc-input { border-radius: 0 @radius @radius 0 !important; }
     &:first-child:last-child { border-radius: @radius !important; }
 
     // remove inline-block space
     & ~ * { margin: 0 0 0 -5px !important; }
   }
 
-  .tef-button + .tef-button { border-left-color: white; }
-  ::content tef-button + tef-button::shadow .tef-button{ border-left-color: white; }
+  .tc-button + .tc-button { border-left-color: white; }
+  ::content tc-button + tc-button::shadow .tc-button{ border-left-color: white; }
 }
 
-textarea.tef-input {
+textarea.tc-input {
   resize: none;
 }
 
