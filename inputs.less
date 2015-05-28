@@ -181,26 +181,7 @@ label {
     & ~ * { margin: 0 0 0 -5px !important; }
   }
 
-  ::content > * {
-    border-radius: 0 !important;
-    &::shadow .tc-button,
-    &::shadow .tc-input {border-radius: 0 !important;}
-    &:first-child,
-    &:first-child > button,
-    &:first-child::shadow .tc-button,
-    &:first-child::shadow .tc-input { border-radius: @radius 0 0 @radius !important; }
-    &:last-child,
-    &:last-child > button,
-    &:last-child::shadow .tc-button,
-    &:last-child::shadow .tc-input { border-radius: 0 @radius @radius 0 !important; }
-    &:first-child:last-child { border-radius: @radius !important; }
-
-    // remove inline-block space
-    & ~ * { margin: 0 0 0 -5px !important; }
-  }
-
   .tc-button + .tc-button { border-left-color: white; }
-  ::content tc-button + tc-button::shadow .tc-button{ border-left-color: white; }
 }
 
 textarea.tc-input {
