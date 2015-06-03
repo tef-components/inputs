@@ -60,6 +60,7 @@ label {
       padding-right: 39px;
     }
 
+    & + [icon],
     & + [data-icon] {
       position: relative;
       top: 3px;
@@ -70,6 +71,7 @@ label {
       &:before { font-size: 24px; }
     }
 
+    &.small + [icon],
     &.small + [data-icon] {
       top: 2px;
       left: -32px;
@@ -78,6 +80,7 @@ label {
       &:before { font-size: 18px; }
     }
 
+    &.large + [icon],
     &.large + [data-icon] {
       top: 6px;
       left: -40px;
@@ -91,8 +94,11 @@ label {
   &.block {
     width: 100%;
 
+    & + [icon],
     & + [data-icon],
+    &.small + [icon],
     &.small + [data-icon],
+    &.large + [icon],
     &.large + [data-icon] {
       position: absolute;
       right: 0;
