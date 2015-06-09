@@ -12,7 +12,8 @@ label {
   padding-right: 7px;
 }
 
-.tc-input {
+.tc-input,
+.tc-textarea {
   display: inline-block;
   vertical-align: middle;
   background: white;
@@ -23,9 +24,14 @@ label {
   border: 1px solid @grey2;
   border-radius: @radius;
   box-sizing: border-box;
-  .truncate();
 
-  //sizes
+  // paceholder
+  &::palceholder {
+    opacity: 0.8;
+    line-height: normal;
+  }
+
+  // sizes
   &.small {
     font-size: 11px;
     line-height: 13px;
@@ -108,6 +114,9 @@ label {
   }
 }
 
+.tc-input { .truncate(); }
+.tc-textarea { resize: none; }
+
 // validation
 .tc-message {
   display: inline-block;
@@ -122,12 +131,14 @@ label {
 .tc-ok,
 .tc-warning,
 .tc-error {
-  .tc-input {
+  .tc-input,
+  .tc-textarea {
     padding: 7px 8px;
     border-width: 2px;
     border-style: solid;
     &.small { padding: 5px 8px; }
     &.large { padding: 6px 13px; }
+
     &:hover,
     &:focus,
     &:active { border-color: @significant; }
@@ -135,21 +146,25 @@ label {
 }
 
 .tc-ok {
-  .tc-input { border-color: @positive; }
+  .tc-input,
+  .tc-textarea  { border-color: @positive; }
   .tc-message { background-color: @positive; }
 }
 
 .tc-warning {
-  .tc-input { border-color: @warning; }
+  .tc-input,
+  .tc-textarea  { border-color: @warning; }
   .tc-message { background-color: @warning; }
 }
 
 .tc-error {
-  .tc-input { border-color: @negative; }
+  .tc-input,
+  .tc-textarea  { border-color: @negative; }
   .tc-message { background-color: @negative; }
 }
 
-.tc-input.block + .tc-message {
+.tc-input.block + .tc-message,
+.tc-textarea.block + .tc-message {
   margin-top: 5px;
   display: block;
 }
@@ -188,10 +203,6 @@ label {
   }
 
   .tc-button + .tc-button { border-left-color: white; }
-}
-
-textarea.tc-input {
-  resize: none;
 }
 
 // disabled
