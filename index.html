@@ -64,6 +64,16 @@
         </style>
       </code>
 
+      <h2>Block label</h2>
+      <label class="block">Label</label>
+      <input type="text" class="tc-input" value="input">
+      <code>
+        <style>
+      <label class="block">Label</label>
+      <input type="text" class="tc-input" value="input">
+        </style>
+      </code>
+
       <h2>Form container</h2>
       <p>Use class="tc-row" to diplay separate blocks of information.</p>
       <div class="tc-row">
@@ -147,30 +157,50 @@
         </style>
       </code>
 
+      <h2>Disabled</h2>
+      <div class="tc-row">
+        <input class="tc-input" type="text" disabled value="Text">
+      </div>
+      <code>
+        <style>
+      <input class="tc-input block" type="text" disabled value="Text">
+        </style>
+      </code>
+
+      <h2>Read only</h2>
+      <div class="tc-row">
+        <input class="tc-input" type="text" readonly value="Text">
+      </div>
+      <code>
+        <style>
+      <input class="tc-input block" type="text" readonly value="Text">
+        </style>
+      </code>
+
       <h2>Validations</h2>
       <div class="tc-row tc-ok">
-        <label>Inline small input</label>
+        <label class="block">Inline small input</label>
         <input class="tc-input small" type="text" value="text">
         <div class="tc-message">
           This field is valid
         </div>
       </div>
       <div class="tc-row tc-ok">
-        <label>Inline input</label>
+        <label class="block">Inline input</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field is valid
         </div>
       </div>
       <div class="tc-row tc-ok">
-        <label>Inline large input</label>
+        <label class="block">Inline large input</label>
         <input class="tc-input large" type="text" value="text">
         <div class="tc-message">
           This field is valid
         </div>
       </div>
       <div class="tc-row tc-ok">
-        <label>Block input</label>
+        <label class="block">Block input</label>
         <input class="tc-input block" type="text" value="text">
         <div class="tc-message">
           This field is valid
@@ -179,7 +209,7 @@
       <code>
         <style>
       <div class="tc-row tc-ok">
-        <label>Label</label>
+        <label class="block">Label</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field is valid
@@ -189,7 +219,7 @@
       </code>
 
       <div class="tc-row tc-warning">
-        <label>Label</label>
+        <label class="block">Label</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field has a warning
@@ -198,7 +228,7 @@
       <code>
         <style>
       <div class="tc-row tc-warning">
-        <label>Label</label>
+        <label class="block">Label</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field has a warning
@@ -208,7 +238,7 @@
       </code>
 
       <div class="tc-row tc-error">
-        <label>Label</label>
+        <label class="block">Label</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field is invalid
@@ -217,7 +247,7 @@
       <code>
         <style>
       <div class="tc-row tc-error">
-        <label>Label</label>
+        <label class="block">Label</label>
         <input class="tc-input" type="text" value="text">
         <div class="tc-message">
           This field is invalid
@@ -254,20 +284,26 @@
 
       <h2>Grouped Inputs & buttons</h2>
 
-      <div class="tc-group">
-        <a href="" class="tc-button small">Anchor</a>
-        <input type="text" class="tc-input small" placeholder="Enter user name">
-        <button class="tc-button small positive">Button</button>
+      <div class="tc-row">
+        <div class="tc-group">
+          <a href="" class="tc-button small">Anchor</a>
+          <input type="text" class="tc-input small" placeholder="Enter user name">
+          <button class="tc-button small positive">Button</button>
+        </div>
       </div>
-      <div class="tc-group">
-        <a href="" class="tc-button">Anchor</a>
-        <input type="text" class="tc-input" placeholder="Enter user name">
-        <button class="tc-button positive">Button</button>
+      <div class="tc-row">
+        <div class="tc-group">
+          <a href="" class="tc-button">Anchor</a>
+          <input type="text" class="tc-input" placeholder="Enter user name">
+          <button class="tc-button positive">Button</button>
+        </div>
       </div>
-      <div class="tc-group">
-        <a href="" class="tc-button large">Anchor</a>
-        <input type="text" class="tc-input large" placeholder="Enter user name">
-        <button class="tc-button large positive">Button</button>
+      <div class="tc-row">
+        <div class="tc-group">
+          <a href="" class="tc-button large">Anchor</a>
+          <input type="text" class="tc-input large" placeholder="Enter user name">
+          <button class="tc-button large positive">Button</button>
+        </div>
       </div>
       <code>
         <style>
@@ -279,34 +315,38 @@
         </style>
       </code>
 
-      <div class="tc-group">
-        <button class="tc-button">
-          <i data-icon="minus"></i>
-        </button>
-        <button class="tc-button">
-          <i data-icon="plus"></i>
-        </button>
-        <input type="text" class="tc-input" placeholder="Enter user name">
+      <div class="tc-row">
+        <div class="tc-group">
+          <button class="tc-button">
+            <i data-icon="minus"></i>
+          </button>
+          <button class="tc-button">
+            <i data-icon="plus"></i>
+          </button>
+          <input type="text" class="tc-input" placeholder="Enter user name">
+        </div>
       </div>
-
-      <div class="tc-group">
-        <a class="tc-button">
-          <i data-icon="minus"></i>
-        </a>
-        <input type="text" class="tc-input" placeholder="Enter user name">
-        <button class="tc-button">
-          <i data-icon="plus"></i>
-        </button>
+      <div class="tc-row">
+        <div class="tc-group">
+          <a class="tc-button">
+            <i data-icon="minus"></i>
+          </a>
+          <input type="text" class="tc-input" placeholder="Enter user name">
+          <button class="tc-button">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
       </div>
-
-      <div class="tc-group">
-        <input type="text" class="tc-input" placeholder="Enter user name">
-        <button class="tc-button">
-          <i data-icon="minus"></i>
-        </button>
-        <button class="tc-button">
-          <i data-icon="plus"></i>
-        </button>
+      <div class="tc-row">
+        <div class="tc-group">
+          <input type="text" class="tc-input" placeholder="Enter user name">
+          <button class="tc-button">
+            <i data-icon="minus"></i>
+          </button>
+          <button class="tc-button">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
       </div>
       <code>
         <style>
@@ -315,6 +355,27 @@
           <i data-icon="minus"></i>
         </button>
         <input type="text" class="tc-input" placeholder="Enter user name">
+        <button class="tc-button">
+          <i data-icon="plus"></i>
+        </button>
+      </div>
+        </style>
+      </code>
+
+      <h2>Grouped block Input & button</h2>
+
+      <div class="tc-row">
+        <div class="tc-group block">
+          <input type="text" class="tc-input block" placeholder="Enter user name">
+          <button class="tc-button">
+            <i data-icon="plus"></i>
+          </button>
+        </div>
+      </div>
+      <code>
+        <style>
+      <div class="tc-group block">
+        <input type="text" class="tc-input block" placeholder="Enter user name">
         <button class="tc-button">
           <i data-icon="plus"></i>
         </button>
